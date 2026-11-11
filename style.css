@@ -1384,3 +1384,23 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
 }
+/* 1. Xóa màu nền trắng của tất cả các phần (section/card) để đồng bộ nền tối */
+header, section, div, .container, .card, .about-section, .hero-section {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* 2. Đồng bộ tất cả màu chữ sang màu sáng dễ đọc */
+body, p, span, li, a, label {
+    color: #cbd5e1 !important;
+}
+
+/* 3. Sửa màu cho các tiêu đề (H1, H2, H3) sáng rõ, không bị tàng hình */
+h1, h2, h3, h4, .section-title, .title {
+    color: #ffffff !important;
+}
+
+/* 4. Giữ màu xanh lá điểm nhấn cho nút bấm và từ khóa chính */
+.btn-primary, .highlight, strong {
+    color: #34d399 !important;
+}
