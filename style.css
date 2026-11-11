@@ -1374,3 +1374,13 @@ h1 {
     background: rgba(255, 255, 255, 0.4);
     transform: scale(1.05);
 }
+body {
+    margin: 0;
+    padding: 0;
+    /* Nền chuyển màu xanh đen vũ trụ sâu thẫm */
+    background: linear-gradient(135deg, #090d16, #0f172a, #05070e);
+    background-attachment: fixed; /* Giữ nền cố định khi cuộn trang */
+    color: #f8fafc; /* Chữ màu sáng để dễ đọc */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
