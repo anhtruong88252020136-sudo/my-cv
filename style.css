@@ -1403,4 +1403,85 @@ h1, h2, h3, h4, .section-title, .title {
 /* 4. Giữ màu xanh lá điểm nhấn cho nút bấm và từ khóa chính */
 .btn-primary, .highlight, strong {
     color: #34d399 !important;
+}/* =========================================================
+   1. SỬA THANH MENU HEADER (Làm rõ menu trên cùng)
+   ========================================================= */
+header, nav, .navbar, .top-nav {
+    background: rgba(15, 23, 42, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+header a, nav a, .nav-link, .logo-text {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5) !important;
+}
+
+header a:hover, nav a:hover {
+    color: #34d399 !important;
+    text-shadow: 0 0 12px #34d399 !important;
+}
+
+/* =========================================================
+   2. ĐỔI NỀN KHUNG THẺ (CARD) SANG KÍNH TỐI MỜ (GLASSMORPHISM)
+   ========================================================= */
+.card, .skill-card, .service-card, .project-card, div[class*="card"], .box {
+    background: rgba(30, 41, 59, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4) !important;
+    border-radius: 16px !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* Hiệu ứng phát sáng lấp lánh khi di chuột vào từng thẻ */
+.card:hover, .skill-card:hover, div[class*="card"]:hover {
+    transform: translateY(-6px) scale(1.02) !important;
+    border-color: #ffd700 !important;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 35px rgba(52, 211, 153, 0.3) !important;
+}
+
+/* =========================================================
+   3. SỬA MÀU CHỮ SÁNG RÕ NỔI BẬT TOÀN TRANG
+   ========================================================= */
+/* Tiêu đề trong khung (Marketing số, Vận hành thương mại, Dữ liệu...) */
+h1, h2, h3, h4, h5, .card-title, .title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9), 0 0 10px rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Nội dung văn bản mô tả */
+p, span, li, div {
+    color: #f1f5f9 !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    opacity: 1 !important;
+}
+
+/* Nổi bật các nhãn kỹ năng (Content, SEO, Excel, Canva...) */
+.tag, .skill-tag, span[class*="tag"], .card span {
+    background: rgba(16, 185, 129, 0.25) !important;
+    color: #6ee7b7 !important;
+    border: 1px solid rgba(52, 211, 153, 0.6) !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    padding: 4px 10px !important;
+    box-shadow: 0 0 8px rgba(52, 211, 153, 0.3) !important;
+}
+
+/* =========================================================
+   4. HIỆU ỨNG TỎA SÁNG LẤP LÁNH (BLING BLING)
+   ========================================================= */
+@keyframes goldGlow {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #ffd700; }
+    50% { text-shadow: 0 0 15px #fff, 0 0 25px #ffd700, 0 0 35px #ffae00; }
+    100% { text-shadow: 0 0 5px #fff, 0 0 10px #ffd700; }
+}
+
+/* Áp dụng hiệu ứng tỏa sáng ánh vàng cho các tiêu đề */
+h1, h2, .highlight-text {
+    animation: goldGlow 3s infinite alternate ease-in-out;
 }
