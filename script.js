@@ -69,3 +69,51 @@ if (bubbleLayer && !window.matchMedia("(prefers-reduced-motion: reduce)").matche
 
   window.setInterval(createBubble, 300);
 }
+// Hàm tạo bong bóng
+function createBubble() {
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
+    
+    const size = Math.random() * 25 + 10 + 'px';
+    bubble.style.width = size;
+    bubble.style.height = size;
+    bubble.style.left = Math.random() * 100 + 'vw';
+    bubble.style.animationDuration = Math.random() * 4 + 5 + 's';
+    
+    document.body.appendChild(bubble);
+    setTimeout(() => bubble.remove(), 9000);
+}
+
+// Hàm tạo ngôi sao lấp lánh (Bling Bling)
+function createStar() {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    
+    const size = Math.random() * 15 + 8 + 'px';
+    star.style.width = size;
+    star.style.height = size;
+    star.style.left = Math.random() * 100 + 'vw';
+    star.style.top = Math.random() * 100 + 'vh';
+    star.style.animationDuration = Math.random() * 1.5 + 1 + 's';
+    
+    document.body.appendChild(star);
+    setTimeout(() => star.remove(), 3000);
+}
+
+// Chạy liên tục hiệu ứng
+setInterval(createBubble, 400);
+setInterval(createStar, 300);
+
+// Xử lý bật/tắt nhạc nền
+const musicBtn = document.getElementById('music-btn');
+const bgMusic = document.getElementById('bg-music');
+
+musicBtn.addEventListener('click', () => {
+    if (bgMusic.paused) {
+        bgMusic.play();
+        musicBtn.textContent = '⏸️ Tắt nhạc';
+    } else {
+        bgMusic.pause();
+        musicBtn.textContent = '🎵 Phát nhạc';
+    }
+});

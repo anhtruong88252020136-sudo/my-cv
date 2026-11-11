@@ -1307,3 +1307,70 @@ h1 {
     display: none;
   }
 }
+/* Hiệu ứng bong bóng */
+.bubble {
+    position: fixed;
+    bottom: -50px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    animation: floatUp linear infinite;
+    z-index: 1;
+}
+
+/* Hiệu ứng ngôi sao lấp lánh (Bling Bling) */
+.star {
+    position: fixed;
+    background-color: #fff;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    pointer-events: none;
+    animation: sparkle ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(0.8) rotate(0deg);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(-105vh) scale(1.2) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(0.3) rotate(0deg);
+        opacity: 0.2;
+        box-shadow: 0 0 2px #fff;
+    }
+    100% {
+        transform: scale(1.2) rotate(45deg);
+        opacity: 1;
+        box-shadow: 0 0 12px #fff, 0 0 20px #ffd700;
+    }
+}
+
+/* Nút phát nhạc */
+.music-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 18px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.music-toggle:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
