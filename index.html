@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
   </head>
+<!-- Nút bật/tắt nhạc nền -->
+<button id="music-btn" class="music-toggle">🎵 Phát nhạc</button>
+<audio id="bg-music" loop>
+    <!-- Thay link nhạc bằng file audio hoặc đường dẫn nhạc của bạn -->
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
   <body>
     <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
 
@@ -38,7 +44,7 @@
         <div class="container hero-grid">
           <div class="hero-copy">
             <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Sinh viên Thương mại điện tử UEH</p>
-            <h1 id="hero-title">Xin chào, mình là <span class="accent-text">Trương Thị Trâm Anh.</span></h1>
+            <h1>Xin chào, mình là <span class="highlight-name">Trương Thị Trâm Anh</span></h1>
             <p class="hero-summary">Mình yêu thích cách công nghệ, dữ liệu và trải nghiệm khách hàng kết hợp để tạo nên những hoạt động kinh doanh trực tuyến hiệu quả.</p>
             <div class="hero-actions">
               <a class="button button-primary" href="#projects">Khám phá dự án <span aria-hidden="true">↗</span></a>
@@ -196,5 +202,6 @@
         <p>© <span id="current-year"></span> Trương Thị Trâm Anh</p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

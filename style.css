@@ -1484,4 +1484,15 @@ p, span, li, div {
 /* Áp dụng hiệu ứng tỏa sáng ánh vàng cho các tiêu đề */
 h1, h2, .highlight-text {
     animation: goldGlow 3s infinite alternate ease-in-out;
+}/* Tách chữ không bị đè lên nhau */
+.highlight-name {
+    display: inline-block;
+    color: #34d399 !important;
+    margin-left: 8px;
+    text-shadow: 0 0 12px rgba(52, 211, 153, 0.6) !important;
+}
+
+/* Đảm bảo hiệu ứng lấp lánh và bong bóng nổi lên trên nền */
+.star, .bubble {
+    z-index: 9999 !important;
 }
