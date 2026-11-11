@@ -1492,7 +1492,35 @@ h1, h2, .highlight-text {
     text-shadow: 0 0 12px rgba(52, 211, 153, 0.6) !important;
 }
 
-/* Đảm bảo hiệu ứng lấp lánh và bong bóng nổi lên trên nền */
+/* Đảm bảo hiệu ứng lấp lánh và bong bóng nổi bên trong nền */
 .star, .bubble {
     z-index: 9999 !important;
+}/* 1. Đặt toàn bộ nội dung web lên lớp trên cùng */
+main, section, header, footer, .container, .card, div {
+    position: relative;
+    z-index: 2; /* Đẩy nội dung lên tầng trên */
+}
+
+/* 2. Đẩy hiệu ứng lấp lánh chìm vào bên trong nền tối */
+.star {
+    position: fixed;
+    background-color: #ffd700;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    pointer-events: none;
+    z-index: 1 !important; /* Nằm bên dưới nội dung, chìm trong nền */
+    animation: innerSparkle 2s ease-in-out infinite alternate;
+}
+
+/* 3. Hiệu ứng tỏa sáng ánh vàng nhẹ nhàng từ trong nền */
+@keyframes innerSparkle {
+    0% {
+        transform: scale(0.3) rotate(0deg);
+        opacity: 0.15;
+        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+    }
+    100% {
+        transform: scale(1.1) rotate(25deg);
+        opacity: 0.85;
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.9));
+    }
 }
