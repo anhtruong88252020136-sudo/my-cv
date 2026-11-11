@@ -1523,4 +1523,43 @@ main, section, header, footer, .container, .card, div {
         opacity: 0.85;
         filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.9));
     }
+}/* =========================================================
+   1. SỬA LỖI TIÊU ĐỀ BỊ ĐÈ CHỮ & CHỮ NỔI BẬT BỊ CO XÍU (HÌNH 1, 2, 3)
+   ========================================================= */
+/* Cấu hình lại tiêu đề chính hiển thị tự nhiên, không bị vỡ dòng */
+h1, h2, h3, .section-title, .section-heading {
+    display: block !important;
+    position: static !important;
+    font-size: 2.2rem !important;
+    line-height: 1.4 !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    letter-spacing: normal !important;
+}
+
+/* Đưa các từ phụ (giá trị thực, nổi bật, tiêu biểu) về kích thước chuẩn và đứng ngang hàng */
+h1 span, h2 span, h3 span, 
+.section-title span, .section-heading span,
+h2 small, h3 small {
+    display: inline-block !important;
+    position: static !important; /* Hủy bỏ thuộc tính vị trí tuyệt đối gây đè chữ */
+    font-size: 2.2rem !important; /* Cho kích thước bằng với chữ tiêu đề chính */
+    font-weight: 700 !important;
+    color: #34d399 !important; /* Đổi sang màu xanh lá điểm nhấn */
+    margin-left: 10px !important; /* Tạo khoảng cách đẹp giữa các từ */
+    transform: none !important;
+    letter-spacing: normal !important;
+}
+
+/* =========================================================
+   2. SỬA LỖI MỜ CHỮ "GROW ONLINE" TRONG VÒNG TRÒN (HÌNH 4)
+   ========================================================= */
+/* Đổi màu chữ trắng sang màu xanh đen đậm để nổi bật trên nền xanh nhạt */
+div[class*="circle"] *, 
+.radar-circle *, 
+.graphic-circle *,
+.hero-graphic * {
+    color: #064e3b !important; /* Màu xanh thẫm sắc nét */
+    font-weight: 800 !important;
+    text-shadow: none !important;
 }
